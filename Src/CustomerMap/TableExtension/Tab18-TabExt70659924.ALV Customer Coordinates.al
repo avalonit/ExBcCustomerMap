@@ -8,7 +8,6 @@ tableextension 70659924 "ALV Customer Coordinates" extends Customer
             DataClassification = CustomerContent;
             DecimalPlaces = 7;
         }
-
         field(70659925; "ALV Longitude"; Decimal)
         {
             Caption = 'Customer Longitude';
@@ -17,5 +16,4 @@ tableextension 70659924 "ALV Customer Coordinates" extends Customer
         }
 
     }
-
 }

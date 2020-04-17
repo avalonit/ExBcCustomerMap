@@ -2,7 +2,6 @@ pageextension 70659928 "ALV Customer Map" extends "Customer Card"
 {
     Caption = 'ALV Customer Map';
 
-
     layout
     {
 
