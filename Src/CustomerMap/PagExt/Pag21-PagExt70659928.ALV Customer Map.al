@@ -22,7 +22,7 @@ pageextension 70659928 "ALV Customer Map" extends "Customer Card"
         }
         addfirst(FactBoxes)
         {
-            part(ALV_MapViewer; "ALV Streetmap Viewer Part")
+            part(ALV_MapViewer; "ALV Map Viewer Part")
             {
                 Caption = 'Map Viewer';
                 ApplicationArea = All;

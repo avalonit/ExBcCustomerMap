@@ -1,7 +1,7 @@
-page 70659927 "ALV Streetmap Viewer Part"
+page 70659927 "ALV Map Viewer Part"
 {
     PageType = CardPart;
-    Caption = 'Streetmap Viewer';
+    Caption = 'Map Viewer';
 
     layout
     {
@@ -12,7 +12,7 @@ page 70659927 "ALV Streetmap Viewer Part"
                 ApplicationArea = All;
                 trigger OnControlAddInReady()
                 begin
-                    InitializeStreetMapViewer();
+                    InitializeMapViewer();
                 end;
 
                 trigger OnMapViewerReady()
@@ -27,7 +27,7 @@ page 70659927 "ALV Streetmap Viewer Part"
     var
         ControlIsReady: Boolean;
 
-    local procedure InitializeStreetMapViewer()
+    local procedure InitializeMapViewer()
     var
         MapViewerSetup: Record "ALV Map Setup";
     begin
