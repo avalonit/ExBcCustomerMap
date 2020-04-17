@@ -2,7 +2,6 @@ var __ViewerFrame;
 var __ViewerOrigin;
 
 function InitializeMapViewControl(url) {
-    alert(url);
     __ViewerOrigin = getViewerOrigin(url);
     //window.addEventListener("message", onMessage, false);
     var controlAddIn = document.getElementById('controlAddIn');
