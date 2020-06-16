@@ -1,4 +1,4 @@
-page 70659927 "ALV Map Viewer Part"
+page 70669927 "ALV Map Viewer Part"
 {
     PageType = CardPart;
     Caption = 'Map Viewer';
@@ -35,16 +35,16 @@ page 70659927 "ALV Map Viewer Part"
         CurrPage.ALVMapViewer.InitializeMapViewControl(MapViewerSetup."Web Viewer URL");
     end;
 
-    local procedure ClientShowPosition(Lat: Decimal; Lon: Decimal)
+    local procedure LoadMapPin(Lat: Decimal; Lon: Decimal)
     var
         tmp: Text;
     begin
-        CurrPage.ALVMapViewer.LoadPin(Lat, Lon);
+        CurrPage.ALVMapViewer.LoadMapPin(Lat, Lon);
     end;
 
-    procedure ClientLoadUrl(Url: Text; Lat: Decimal; Lon: Decimal)
+    procedure LoadMapPin(Url: Text; Lat: Decimal; Lon: Decimal)
     begin
-        ClientShowPosition(Lat, Lon);
+        LoadMapPin(Lat, Lon);
     end;
 
     local procedure ClientShowMessage(message: Text)

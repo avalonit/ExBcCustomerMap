@@ -48,14 +48,35 @@ function mapViewerReady(message) {
 }
 
 
-function LoadPin(lat, lng) {
+
+function LoadMapPin(lat, lng) {
 
     try {
-        __ViewerFrame.contentWindow.postMessage({
-            'func': 'centerMap',
-            'lat': lat,
-            'lng': lng,
-        }, __ViewerOrigin);
+        setTimeout(function () {
+            DelayedLoadMapPin(lat,lng);
+        }, 1000);
+      }
+      catch(err) {
+        alert(err);
+    } 
+
+}
+
+
+function DelayedLoadMapPin(lat, lng) {
+
+    try {
+        
+        if(__ViewerFrame==null)
+            ShowMessage("__ViewerFrame is not defined");
+        else if(__ViewerFrame.contentWindow==null)
+            ShowMessage("__ViewerFrame.contentWindow is not defined");
+        else
+            __ViewerFrame.contentWindow.postMessage({
+                'func': 'centerMap',
+                'lat': lat,
+                'lng': lng,
+            }, __ViewerOrigin);
       }
       catch(err) {
         alert(err);

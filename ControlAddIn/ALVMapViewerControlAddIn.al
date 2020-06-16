@@ -10,6 +10,6 @@ controladdin "ALVMapViewerControlAddIn"
     event OnControlAddInReady();
     event OnMapViewerReady();
     procedure InitializeMapViewControl(url: Text);
-    procedure LoadPin(Lat: Decimal; Lon: Decimal);
+    procedure LoadMapPin(Lat: Decimal; Lon: Decimal);
     procedure ShowMessage(message: Text);
 }

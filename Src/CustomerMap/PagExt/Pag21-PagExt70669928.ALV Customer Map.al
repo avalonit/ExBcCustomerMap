@@ -1,4 +1,4 @@
-pageextension 70659928 "ALV Customer Map" extends "Customer Card"
+pageextension 70669928 "ALV Customer Map" extends "Customer Card"
 {
     Caption = 'ALV Customer Map';
 
@@ -30,15 +30,27 @@ pageextension 70659928 "ALV Customer Map" extends "Customer Card"
     }
 
 
-    trigger OnAfterGetRecord()
+    var
+        firstInit: Boolean;
+
+    trigger OnOpenPage()
     begin
-        ShowMapInViewer();
+        firstInit := true;
+        //Message('OnOpenPage');
     end;
 
-    local procedure ShowMapInViewer()
+    trigger OnAfterGetRecord()
+    begin
+        //Message('OnAfterGetRecord');
+        //if (firstInit) then
+        LoadMapPin();
+        firstInit := false;
+    end;
+
+    local procedure LoadMapPin()
     var
         MapViewerSetup: Record "ALV Map Setup";
     begin
-        CurrPage.ALV_MapViewer.Page.ClientLoadUrl(MapViewerSetup."Web Viewer URL", "ALV Latitude", "ALV Longitude");
+        CurrPage.ALV_MapViewer.Page.LoadMapPin(MapViewerSetup."Web Viewer URL", "ALV Latitude", "ALV Longitude");
     end;
 }

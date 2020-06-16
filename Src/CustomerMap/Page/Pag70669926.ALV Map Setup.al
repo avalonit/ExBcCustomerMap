@@ -1,4 +1,4 @@
-page 70659926 "ALV Map Setup"
+page 70669926 "ALV Map Setup"
 {
     PageType = Card;
     SourceTable = "ALV Map Setup";

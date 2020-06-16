@@ -29,8 +29,8 @@
   "runtime": "4.0",
   "logo" : "Logo/logo.png",
   "idRange": {
-    "from": 70659924, 
-    "to": 706599999
+    "from": 70669924, 
+    "to": 706699999
   },
   "features": [ "TranslationFile" ]
 }

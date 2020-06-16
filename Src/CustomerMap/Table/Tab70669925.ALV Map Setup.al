@@ -1,4 +1,4 @@
-table 70659925 "ALV Map Setup"
+table 70669925 "ALV Map Setup"
 {
     DataPerCompany = false;
     DataClassification = CustomerContent;
